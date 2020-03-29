@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:FitnessApp.Model" xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="FitnessApp.BMICalculatorPage"> 
+    
+    <ContentPage.BindingContext>
+
+        <local:BMICalculatorPageViewModel/>
+
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        <Grid RowSpacing="16"
+              ColumnSpacing="10">
+
+
+            <Label  x:Name="Imperial_System_Label"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        Text="Imperial System" 
+                        TextColor="Black"
+                        FontSize="22"
+                        HorizontalOptions="Center"/>
+
+            <Switch x:Name="Switch"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        HorizontalOptions="Center"
+                        Toggled="Switch_Toggled"/>
+
+            <Label x:Name="Height_Label"
+                       Grid.Row="5" 
+                       Grid.ColumnSpan="3"
+                       Text="{Binding Height, StringFormat='Height: {0:F0}'}" 
+                       TextColor="Black"
+                       FontSize="22"
+                       HorizontalOptions="Center"/>
+
+            <Slider Grid.Row="6" 
+                        Grid.ColumnSpan="3"
+                        x:Name="Height_Slider" 
+                        Maximum="225" 
+                        Minimum="135" 
+                        Value="170" ValueChanged="Height_Slider_ValueChanged"/>
+
+            <Label x:Name="Weight_Label"
+                       Grid.Row="7" 
+                       Grid.ColumnSpan="3"
+                       Text="{Binding Weight, StringFormat='Weight: {0:F0}'}" 
+                       TextColor="Black"
+                       FontSize="22"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+            <Slider Grid.Row="8" 
+                        Grid.ColumnSpan="3"
+                        x:Name="Weight_Slider" 
+                        Maximum="155" 
+                        Minimum="35" 
+                        Value="70" 
+                        ValueChanged="Weight_Slider_ValueChanged"/>
+
+            <Button Grid.Row="10" 
+                        Grid.ColumnSpan="3"
+                        Text="Calculate" 
+                        BackgroundColor="LightSkyBlue"
+                        VerticalOptions="End"
+                        Clicked="CalculateButton_OnClicked"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
+    
+    

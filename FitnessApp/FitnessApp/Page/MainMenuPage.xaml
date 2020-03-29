@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FitnessApp.MainMenuPage"
+             BackgroundColor="AliceBlue"> 
+
+    <StackLayout Padding="20">
+
+        <Label Text="Want do you want to calculate?"
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+
+
+        <Grid>
+
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    BackgroundColor="LightSkyBlue"
+                    Text="BMI"
+                    TextColor="White"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="BMIButton_OnClicked"/>
+
+            <Button Grid.Row="3"
+                    Grid.Column="1"
+                    BackgroundColor="LightSkyBlue"
+                    Text="OTHER"
+                    TextColor="White"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    BackgroundColor="LightSkyBlue"
+                    Text="OTHER"
+                    TextColor="White"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="1"
+                    BackgroundColor="LightSkyBlue"
+                    Text="OTHER"
+                    TextColor="White"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
