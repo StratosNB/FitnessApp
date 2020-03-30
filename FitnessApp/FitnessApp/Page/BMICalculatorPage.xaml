@@ -17,6 +17,35 @@
         <Grid RowSpacing="16"
               ColumnSpacing="10">
 
+            <ScrollView Orientation="Horizontal" BackgroundColor="#f4f4f4" VerticalOptions="Fill" Padding="8,16" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <custom:PancakeView Padding="12" Style="{StaticResource action_highlighted}" HeightRequest="76" WidthRequest="84">
+                        <StackLayout VerticalOptions="Center">
+                            <Label FontSize="24" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
+                            <Label FontSize="13" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="Rekeningen" />
+                        </StackLayout>
+                    </custom:PancakeView>
+                    <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
+                        <StackLayout VerticalOptions="Center">
+                            <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeSolid}" />
+                            <Label FontSize="13" HorizontalTextAlignment="Center" Text="Zelf regelen" />
+                        </StackLayout>
+                    </custom:PancakeView>
+                    <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
+                        <StackLayout VerticalOptions="Center">
+                            <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
+                            <Label FontSize="13" HorizontalTextAlignment="Center" Text="Bankmail" />
+                        </StackLayout>
+                    </custom:PancakeView>
+                    <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
+                        <StackLayout VerticalOptions="Center">
+                            <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeSolid}" />
+                            <Label FontSize="13" HorizontalTextAlignment="Center" Text="Instellingen" />
+                        </StackLayout>
+                    </custom:PancakeView>
+                </StackLayout>
+            </ScrollView>
+
 
             <Label  x:Name="Imperial_System_Label"
                         Grid.Row="3"
