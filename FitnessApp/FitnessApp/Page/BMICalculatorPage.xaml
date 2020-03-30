@@ -17,7 +17,7 @@
         <Grid RowSpacing="16"
               ColumnSpacing="10">
 
-            <ScrollView Orientation="Horizontal" BackgroundColor="#f4f4f4" VerticalOptions="Fill" Padding="8,16" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <ScrollView Orientation="Horizontal" BackgroundColor="#f4f4f4" VerticalOptions="Fill" Padding="8,16" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Grid.ColumnSpan="3" Grid.RowSpan="3">
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <custom:PancakeView Padding="12" Style="{StaticResource action_highlighted}" HeightRequest="76" WidthRequest="84">
                         <StackLayout VerticalOptions="Center">
