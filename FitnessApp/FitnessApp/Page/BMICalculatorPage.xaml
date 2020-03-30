@@ -13,41 +13,28 @@
 
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="20">
-        <Grid RowSpacing="16"
-              ColumnSpacing="10">
+    <StackLayout Padding="15" Spacing="15" BackgroundColor="AliceBlue">
 
-            <ScrollView Orientation="Horizontal" BackgroundColor="#f4f4f4" VerticalOptions="Fill" Padding="8,16" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Grid.ColumnSpan="3" Grid.RowSpan="3">
-                <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="#95d0fc"  Grid.ColumnSpan="3" Grid.RowSpan="3">
                     <custom:PancakeView Padding="12" Style="{StaticResource action_highlighted}" HeightRequest="76" WidthRequest="84">
-                        <StackLayout VerticalOptions="Center">
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                             <Label FontSize="24" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
                             <Label FontSize="13" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="Rekeningen" />
                         </StackLayout>
                     </custom:PancakeView>
                     <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
-                        <StackLayout VerticalOptions="Center">
+                    <StackLayout  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                             <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeSolid}" />
                             <Label FontSize="13" HorizontalTextAlignment="Center" Text="Zelf regelen" />
                         </StackLayout>
                     </custom:PancakeView>
-                    <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
-                        <StackLayout VerticalOptions="Center">
-                            <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
-                            <Label FontSize="13" HorizontalTextAlignment="Center" Text="Bankmail" />
-                        </StackLayout>
-                    </custom:PancakeView>
-                    <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
-                        <StackLayout VerticalOptions="Center">
-                            <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeSolid}" />
-                            <Label FontSize="13" HorizontalTextAlignment="Center" Text="Instellingen" />
-                        </StackLayout>
-                    </custom:PancakeView>
                 </StackLayout>
-            </ScrollView>
 
 
-            <Label  x:Name="Imperial_System_Label"
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.ColumnSpan="3"  BackgroundColor="#95d0fc">
+
+                <Label  x:Name="Imperial_System_Label"
                         Grid.Row="3"
                         Grid.ColumnSpan="3"
                         Text="Imperial System" 
@@ -55,28 +42,35 @@
                         FontSize="22"
                         HorizontalOptions="Center"/>
 
-            <Switch x:Name="Switch"
+                <Switch x:Name="Switch"
                         Grid.Row="4"
                         Grid.ColumnSpan="3"
                         HorizontalOptions="Center"
                         Toggled="Switch_Toggled"/>
+            </StackLayout>
 
-            <Label x:Name="Height_Label"
-                       Grid.Row="5" 
-                       Grid.ColumnSpan="3"
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="5" Grid.ColumnSpan="3"  BackgroundColor="#95d0fc">
+
+                <Label x:Name="Height_Label"
+                   
                        Text="{Binding Height, StringFormat='Height: {0:F0}'}" 
                        TextColor="Black"
                        FontSize="22"
                        HorizontalOptions="Center"/>
 
-            <Slider Grid.Row="6" 
-                        Grid.ColumnSpan="3"
+                <Slider 
                         x:Name="Height_Slider" 
                         Maximum="225" 
                         Minimum="135" 
-                        Value="170" ValueChanged="Height_Slider_ValueChanged"/>
+                        Value="170" 
+                        ValueChanged="Height_Slider_ValueChanged"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+            </StackLayout>
 
-            <Label x:Name="Weight_Label"
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="7" Grid.ColumnSpan="3"  BackgroundColor="#95d0fc">
+
+                <Label x:Name="Weight_Label"
                        Grid.Row="7" 
                        Grid.ColumnSpan="3"
                        Text="{Binding Weight, StringFormat='Weight: {0:F0}'}" 
@@ -85,22 +79,27 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
 
-            <Slider Grid.Row="8" 
+                <Slider Grid.Row="8" 
                         Grid.ColumnSpan="3"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
                         x:Name="Weight_Slider" 
                         Maximum="155" 
                         Minimum="35" 
                         Value="70" 
                         ValueChanged="Weight_Slider_ValueChanged"/>
+            </StackLayout>
 
             <Button Grid.Row="10" 
                         Grid.ColumnSpan="3"
                         Text="Calculate" 
-                        BackgroundColor="LightSkyBlue"
+                        TextColor="Black"
+                        FontSize="15"
+                        BackgroundColor="#cb0162"
                         VerticalOptions="End"
                         Clicked="CalculateButton_OnClicked"/>
 
-        </Grid>
+
     </StackLayout>
 </ContentPage>
     
