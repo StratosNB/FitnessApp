@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage rainbows:DebugRainbow.ShowColors="true"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,7 +8,8 @@
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:xyz="clr-namespace:FitnessApp"
              mc:Ignorable="d"
-             x:Class="FitnessApp.BMICalculatorPage"> 
+             xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows" 
+             x:Class="FitnessApp.BMICalculatorPage">  
     
     <ContentPage.BindingContext>
 
@@ -27,43 +29,54 @@
             
             <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center" >
-                
-                <custom:PancakeView Padding="12" 
+
+                <StackLayout Orientation="Vertical" 
+                             VerticalOptions="CenterAndExpand" >
+
+                    <custom:PancakeView Padding="12" 
                                     Style="{StaticResource action_highlighted}" 
-                                    HeightRequest="76" 
+                                    HeightRequest="68" 
                                     WidthRequest="84">
-                    
-                    <StackLayout VerticalOptions="CenterAndExpand" 
+
+                        <StackLayout VerticalOptions="CenterAndExpand" 
                                  HorizontalOptions="CenterAndExpand" >
-                        
-                        <Label FontSize="24"
+
+                            <Label FontSize="24"
                                HorizontalTextAlignment="Center" 
                                TextColor="#ffffff" 
                                Text="" 
                                FontFamily="{StaticResource FontAwesome5FreeRegular}" />
-                        
-                        <Label FontSize="13" 
+
+                        </StackLayout>
+                    </custom:PancakeView>
+                    
+                            <Label FontSize="13" 
                                HorizontalTextAlignment="Center" 
                                TextColor="#ffffff" 
                                Text="Male" />
-                    </StackLayout>
-                </custom:PancakeView>
-                
-                <custom:PancakeView Style="{StaticResource action_normal}" 
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" 
+                             VerticalOptions="CenterAndExpand" >
+
+                    <custom:PancakeView Style="{StaticResource action_normal}" 
                                     HeightRequest="68" 
                                     WidthRequest="84">
-                    
-                    <StackLayout  VerticalOptions="CenterAndExpand" 
+
+                        <StackLayout  VerticalOptions="CenterAndExpand" 
                                   HorizontalOptions="CenterAndExpand" >
-                        <Label FontSize="24"
+                            <Label FontSize="24"
                                HorizontalTextAlignment="Center" 
                                Text="" 
                                FontFamily="{StaticResource FontAwesome5FreeSolid}" />
-                        
-                        <Label FontSize="13" 
-                               HorizontalTextAlignment="Center" Text="Female" />
-                    </StackLayout>
-                </custom:PancakeView>
+
+                        </StackLayout>
+                    </custom:PancakeView>
+
+                    <Label FontSize="13" 
+                           HorizontalTextAlignment="Center" 
+                           Text="Female" />
+                </StackLayout>
             </StackLayout>
         </Frame>
 
@@ -73,8 +86,7 @@
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand" >
             
-            <StackLayout Orientation="Horizontal" 
-                         
+            <StackLayout Orientation="Horizontal"                         
                          BackgroundColor="#3F51B5">
 
                 <StackLayout VerticalOptions="CenterAndExpand" 
