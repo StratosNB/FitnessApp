@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:FitnessApp.Model" xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:local="clr-namespace:FitnessApp.Model" 
+             xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:xyz="clr-namespace:FitnessApp"
              mc:Ignorable="d"
              x:Class="FitnessApp.BMICalculatorPage"> 
     
@@ -16,9 +18,9 @@
     <StackLayout Padding="15" Spacing="15" BackgroundColor="White">
 
         <Frame CornerRadius="10"       
-               BackgroundColor="#95d0fc"
+               BackgroundColor="#3F51B5"
                Padding="0">
-            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="Center" BackgroundColor="#95d0fc">
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
                 <custom:PancakeView Padding="12" Style="{StaticResource action_highlighted}" HeightRequest="76" WidthRequest="84">
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                         <Label FontSize="24" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
@@ -36,18 +38,41 @@
 
         <Frame CornerRadius="10"  
                OutlineColor="Red" 
-               Padding="0"
-               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#95d0fc">
-                <Label  x:Name="Imperial_System_Label"
+               Padding="0">
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#3F51B5">
+                <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="EndAndExpand">
+                    <Label x:Name="Imperial_System_Label"
                         Text="Imperial System" 
-                        TextColor="Black"
-                        FontSize="22"
-                        HorizontalOptions="Center"/>
-
-                <Switch x:Name="Switch"
+                        TextColor="White"
+                        FontSize="10"
+                        HorizontalTextAlignment="Center"
                         HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"/>
+                    <Switch x:Name="Switch"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
                         Toggled="Switch_Toggled"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" 
+                             HorizontalOptions="CenterAndExpand" 
+                             VerticalOptions="EndAndExpand" >
+                    <xyz:TransparentEntry Keyboard="Numeric"
+                                          Text="{Binding Source={x:Reference stepper}, Path=Value}" 
+                                          TextColor="White"
+                                          FontSize="35" 
+                                          HorizontalTextAlignment="Center"
+                                          HorizontalOptions="Center"/>
+
+                    <Stepper
+                       x:Name="stepper"
+                       Maximum="125"
+                       Minimum="0"
+                       Increment="1"
+                       Value="24"
+                       VerticalOptions="EndAndExpand"/>
+                </StackLayout>
             </StackLayout>
         </Frame>
 
@@ -55,22 +80,21 @@
                OutlineColor="Red" 
                Padding="0"
                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout HorizontalOptions="FillAndExpand"  BackgroundColor="#95d0fc">
-
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#3F51B5">
                 <Label x:Name="Height_Label"
                        Text="{Binding Height, StringFormat='Height: {0:F0}'}" 
-                       TextColor="Black"
-                       FontSize="25"
-                       HorizontalOptions="Center"/>
+                       TextColor="White"
+                       FontSize="35"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"/>
                       
-
                 <Slider x:Name="Height_Slider" 
                         Maximum="225" 
                         Minimum="135" 
                         Value="170" 
                         ValueChanged="Height_Slider_ValueChanged"
                         HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"/>
+                        VerticalOptions="StartAndExpand"/>
                         
             </StackLayout>
         </Frame>
@@ -79,35 +103,32 @@
                OutlineColor="Red" 
                Padding="0"
                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout Orientation="Vertical"  BackgroundColor="#95d0fc">
+            <StackLayout Orientation="Vertical"  BackgroundColor="#3F51B5">
 
                 <Label x:Name="Weight_Label"
                        Text="{Binding Weight, StringFormat='Weight: {0:F0}'}" 
-                       TextColor="Black"
-                       FontSize="25"
+                       TextColor="White"
+                       FontSize="35"
                        HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
+                       VerticalOptions="CenterAndExpand"/>
 
-                <Slider
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        x:Name="Weight_Slider" 
+                <Slider x:Name="Weight_Slider" 
                         Maximum="155" 
                         Minimum="35" 
                         Value="70" 
-                        ValueChanged="Weight_Slider_ValueChanged"/>
+                        ValueChanged="Weight_Slider_ValueChanged"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand"/>    
+                        
             </StackLayout>
         </Frame>
 
         <Button Text="Calculate" 
-                TextColor="Black"
+                TextColor="White"
                 FontSize="20"
-                BackgroundColor="Accent"
+                BackgroundColor="#FF4081"
                 VerticalOptions="FillAndExpand"      
                 Clicked="CalculateButton_OnClicked"/>
-                        
-
-
     </StackLayout>
 </ContentPage>
     
