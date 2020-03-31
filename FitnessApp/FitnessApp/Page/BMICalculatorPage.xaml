@@ -15,22 +15,53 @@
 
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="15" Spacing="15" BackgroundColor="White">
+    <StackLayout Padding="7" 
+                 Spacing="7" 
+                 BackgroundColor="White">
 
         <Frame CornerRadius="10"       
                BackgroundColor="#3F51B5"
-               Padding="0">
-            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
-                <custom:PancakeView Padding="12" Style="{StaticResource action_highlighted}" HeightRequest="76" WidthRequest="84">
-                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
-                        <Label FontSize="24" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="" FontFamily="{StaticResource FontAwesome5FreeRegular}" />
-                        <Label FontSize="13" HorizontalTextAlignment="Center" TextColor="#ffffff" Text="Male" />
+               Padding="0"
+               VerticalOptions="FillAndExpand" 
+               HorizontalOptions="FillAndExpand">
+            
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" >
+                
+                <custom:PancakeView Padding="12" 
+                                    Style="{StaticResource action_highlighted}" 
+                                    HeightRequest="76" 
+                                    WidthRequest="84">
+                    
+                    <StackLayout VerticalOptions="CenterAndExpand" 
+                                 HorizontalOptions="CenterAndExpand" >
+                        
+                        <Label FontSize="24"
+                               HorizontalTextAlignment="Center" 
+                               TextColor="#ffffff" 
+                               Text="" 
+                               FontFamily="{StaticResource FontAwesome5FreeRegular}" />
+                        
+                        <Label FontSize="13" 
+                               HorizontalTextAlignment="Center" 
+                               TextColor="#ffffff" 
+                               Text="Male" />
                     </StackLayout>
                 </custom:PancakeView>
-                <custom:PancakeView Style="{StaticResource action_normal}" HeightRequest="68" WidthRequest="84">
-                    <StackLayout  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
-                        <Label FontSize="24" HorizontalTextAlignment="Center" Text="" FontFamily="{StaticResource FontAwesome5FreeSolid}" />
-                        <Label FontSize="13" HorizontalTextAlignment="Center" Text="Female" />
+                
+                <custom:PancakeView Style="{StaticResource action_normal}" 
+                                    HeightRequest="68" 
+                                    WidthRequest="84">
+                    
+                    <StackLayout  VerticalOptions="CenterAndExpand" 
+                                  HorizontalOptions="CenterAndExpand" >
+                        <Label FontSize="24"
+                               HorizontalTextAlignment="Center" 
+                               Text="" 
+                               FontFamily="{StaticResource FontAwesome5FreeSolid}" />
+                        
+                        <Label FontSize="13" 
+                               HorizontalTextAlignment="Center" Text="Female" />
                     </StackLayout>
                 </custom:PancakeView>
             </StackLayout>
@@ -38,40 +69,49 @@
 
         <Frame CornerRadius="10"  
                OutlineColor="Red" 
-               Padding="0">
-            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#3F51B5">
-                <StackLayout
-                    VerticalOptions="Center"
-                    HorizontalOptions="EndAndExpand">
+               Padding="0"
+               VerticalOptions="FillAndExpand" 
+               HorizontalOptions="FillAndExpand" >
+            
+            <StackLayout Orientation="Horizontal" 
+                         
+                         BackgroundColor="#3F51B5">
+
+                <StackLayout VerticalOptions="CenterAndExpand" 
+                             HorizontalOptions="CenterAndExpand">
+                    
                     <Label x:Name="Imperial_System_Label"
                         Text="Imperial System" 
                         TextColor="White"
                         FontSize="10"
                         HorizontalTextAlignment="Center"
-                        HorizontalOptions="Center"
-                        VerticalOptions="CenterAndExpand"/>
+                        HorizontalOptions="Center"/>
+                    
                     <Switch x:Name="Switch"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center"
                         Toggled="Switch_Toggled"/>
                 </StackLayout>
+                
                 <StackLayout Orientation="Vertical" 
-                             HorizontalOptions="CenterAndExpand" 
-                             VerticalOptions="EndAndExpand" >
+                             HorizontalOptions="CenterAndExpand" >
+
+                    <Label Text="Age" TextColor="White"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"/>
+
                     <xyz:TransparentEntry Keyboard="Numeric"
                                           Text="{Binding Source={x:Reference stepper}, Path=Value}" 
                                           TextColor="White"
                                           FontSize="35" 
                                           HorizontalTextAlignment="Center"
-                                          HorizontalOptions="Center"/>
+                                          HorizontalOptions="CenterAndExpand"
+                                          VerticalOptions="Start"/>
 
-                    <Stepper
-                       x:Name="stepper"
-                       Maximum="125"
-                       Minimum="0"
-                       Increment="1"
-                       Value="24"
-                       VerticalOptions="EndAndExpand"/>
+                    <Stepper x:Name="stepper"
+                             Maximum="125"
+                             Minimum="0"
+                             Increment="1"
+                             Value="24" />
                 </StackLayout>
             </StackLayout>
         </Frame>
@@ -79,8 +119,11 @@
         <Frame CornerRadius="10"  
                OutlineColor="Red" 
                Padding="0"
-               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#3F51B5">
+               VerticalOptions="FillAndExpand" 
+               HorizontalOptions="FillAndExpand">
+            
+            <StackLayout BackgroundColor="#3F51B5">
+                                
                 <Label x:Name="Height_Label"
                        Text="{Binding Height, StringFormat='Height: {0:F0}'}" 
                        TextColor="White"
@@ -102,9 +145,11 @@
         <Frame CornerRadius="10"  
                OutlineColor="Red" 
                Padding="0"
-               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout Orientation="Vertical"  BackgroundColor="#3F51B5">
-
+               VerticalOptions="FillAndExpand" 
+               HorizontalOptions="FillAndExpand">
+            
+            <StackLayout BackgroundColor="#3F51B5">  
+                
                 <Label x:Name="Weight_Label"
                        Text="{Binding Weight, StringFormat='Weight: {0:F0}'}" 
                        TextColor="White"
