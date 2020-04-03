@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage rainbows:DebugRainbow.ShowColors="true"
+<ContentPage 
              xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -34,18 +34,13 @@
                              VerticalOptions="CenterAndExpand" >
 
                     <custom:PancakeView Padding="12" 
-                                    Style="{StaticResource action_highlighted}" 
+                                    Style="{StaticResource action_normal}"  
                                     HeightRequest="68" 
                                     WidthRequest="84">
 
                         <StackLayout VerticalOptions="CenterAndExpand" 
-                                 HorizontalOptions="CenterAndExpand" >
-
-                            <Label FontSize="24"
-                               HorizontalTextAlignment="Center" 
-                               TextColor="#ffffff" 
-                               Text="" 
-                               FontFamily="{StaticResource FontAwesome5FreeRegular}" />
+                                 HorizontalOptions="CenterAndExpand">
+                            <ImageButton Source=""/>
 
                         </StackLayout>
                     </custom:PancakeView>
@@ -65,8 +60,8 @@
 
                         <StackLayout  VerticalOptions="CenterAndExpand" 
                                   HorizontalOptions="CenterAndExpand" >
-                            <Label FontSize="24"
-                               HorizontalTextAlignment="Center" 
+                            
+                            <Button FontSize="24"
                                Text="" 
                                FontFamily="{StaticResource FontAwesome5FreeSolid}" />
 
@@ -75,7 +70,8 @@
 
                     <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 
-                           Text="Female" />
+                           Text="Female"
+                           TextColor="#ffffff"/>
                 </StackLayout>
             </StackLayout>
         </Frame>
