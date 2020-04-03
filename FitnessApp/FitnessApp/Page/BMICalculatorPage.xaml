@@ -40,7 +40,8 @@
 
                         <StackLayout VerticalOptions="CenterAndExpand" 
                                  HorizontalOptions="CenterAndExpand">
-                            <ImageButton Source=""/>
+                            
+                            <ImageButton Source="male-symbol.jpg"/>
 
                         </StackLayout>
                     </custom:PancakeView>
@@ -60,11 +61,9 @@
 
                         <StackLayout  VerticalOptions="CenterAndExpand" 
                                   HorizontalOptions="CenterAndExpand" >
-                            
-                            <Button FontSize="24"
-                               Text="" 
-                               FontFamily="{StaticResource FontAwesome5FreeSolid}" />
 
+                            <ImageButton Source="Female-symbol.jpg"/>
+                            
                         </StackLayout>
                     </custom:PancakeView>
 
