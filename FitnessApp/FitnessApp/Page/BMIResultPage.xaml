@@ -1,12 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              mc:Ignorable="d"
              x:Class="FitnessApp.BMIResultPage">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
-</TabbedPage>
+    <StackLayout Padding="7" 
+                 Spacing="7" 
+                 BackgroundColor="White">
+
+        <Label Text="Your Result"
+               TextColor="Black"
+               FontSize="35"/>
+
+        <custom:PancakeView  CornerRadius="10"       
+                             BackgroundColor="#3F51B5"
+                             Padding="0"
+                             VerticalOptions="FillAndExpand">
+            <Label Text="BMI"
+                   FontSize="20"
+                   HorizontalOptions="Center" TextColor="#FFFFFF"/>
+
+            
+        </custom:PancakeView>
+
+
+
+    </StackLayout>
+
+</ContentPage>

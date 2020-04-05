@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace FitnessApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BMIResultPage : TabbedPage
+    public partial class BMIResultPage : ContentPage
     {
         public BMIResultPage()
         {

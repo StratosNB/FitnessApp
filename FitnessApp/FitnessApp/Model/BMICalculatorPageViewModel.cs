@@ -47,6 +47,19 @@ namespace FitnessApp.Model
             }
         }
 
+        public string BMI
+        {
+            get
+            {
+                return bmi;
+            }
+
+            set 
+            {
+
+            }
+
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -31,41 +31,30 @@
                          HorizontalOptions="Center" >
 
                 <StackLayout Orientation="Vertical" 
-                             VerticalOptions="CenterAndExpand" >
+                             VerticalOptions="CenterAndExpand"
+                             Padding="10">
 
-                    <custom:PancakeView Padding="12" 
-                                    Style="{StaticResource action_normal}"  
-                                    HeightRequest="68" 
-                                    WidthRequest="84">
+                    <Button Text="♂"
+                            TextColor="DeepSkyBlue"
+                            FontSize="65"
+                            HeightRequest="100"
+                            WidthRequest="100"/>
 
-                        <StackLayout VerticalOptions="CenterAndExpand" 
-                                 HorizontalOptions="CenterAndExpand">
-                            
-                            <ImageButton Source="male-symbol.jpg"/>
-
-                        </StackLayout>
-                    </custom:PancakeView>
+                    <Label FontSize="13" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="#ffffff" 
+                           Text="Male" />
                     
-                            <Label FontSize="13" 
-                               HorizontalTextAlignment="Center" 
-                               TextColor="#ffffff" 
-                               Text="Male" />
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand" >
 
-                    <custom:PancakeView Style="{StaticResource action_normal}" 
-                                    HeightRequest="68" 
-                                    WidthRequest="84">
-
-                        <StackLayout  VerticalOptions="CenterAndExpand" 
-                                  HorizontalOptions="CenterAndExpand" >
-
-                            <ImageButton Source="Female-symbol.jpg"/>
-                            
-                        </StackLayout>
-                    </custom:PancakeView>
+                    <Button Text="♀"
+                            TextColor="DeepPink"
+                            FontSize="65"
+                            HeightRequest="100"
+                            WidthRequest="100"/>
 
                     <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 

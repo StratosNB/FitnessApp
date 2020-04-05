@@ -94,16 +94,13 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\FemaleSymbol.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FitnessApp\FitnessApp.csproj">
       <Project>{39952F26-A496-41C4-9A15-79D9DF08A3BE}</Project>
       <Name>FitnessApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\MaleSymbol.png" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

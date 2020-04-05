@@ -13,58 +13,59 @@ namespace FitnessApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BMICalculatorPage : ContentPage
     {
-        BMICalculatorPageViewModel bmiPVM = new BMICalculatorPageViewModel();
+        BMICalculatorPageViewModel BmiPVM = new BMICalculatorPageViewModel();
         public BMICalculatorPage()
         {
             InitializeComponent();
-            BindingContext = bmiPVM;
+            BindingContext = BmiPVM;
 
-            bmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
-            bmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
+            BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
+            BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
         }
         private void Switch_Toggled(object sender, ToggledEventArgs e)
         {
             if (e.Value)
             {
-                bmiPVM.Height = bmiPVM.CmToFeetAndInches(Height_Slider.Value);
-                bmiPVM.Weight = bmiPVM.KgToLbs(Weight_Slider.Value);
+                BmiPVM.Height = BmiPVM.CmToFeetAndInches(Height_Slider.Value);
+                BmiPVM.Weight = BmiPVM.KgToLbs(Weight_Slider.Value);
 
             }
             else
             {
-                bmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
-                bmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
+                BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
+                BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
             }
 
         }
 
         private void Height_Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            if (bmiPVM.Height.Contains("'"))
+            if (BmiPVM.Height.Contains("'"))
             {
-                bmiPVM.Height = bmiPVM.CmToFeetAndInches(e.NewValue);
+                BmiPVM.Height = BmiPVM.CmToFeetAndInches(e.NewValue);
             }
             else
             {
-                bmiPVM.Height = Math.Round(e.NewValue, 1).ToString() + "cm";
+                BmiPVM.Height = Math.Round(e.NewValue, 1).ToString() + "cm";
             }
 
         }
         private void Weight_Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            if (bmiPVM.Weight.Contains("lbs"))
+            if (BmiPVM.Weight.Contains("lbs"))
             {
-                bmiPVM.Weight = bmiPVM.KgToLbs(e.NewValue);
+                BmiPVM.Weight = BmiPVM.KgToLbs(e.NewValue);
             }
             else
             {
-                bmiPVM.Weight = Math.Round(e.NewValue, 1).ToString() + "kg";
+                BmiPVM.Weight = Math.Round(e.NewValue, 1).ToString() + "kg";
             }
 
         }
 
         private async void CalculateButton_OnClicked(object sender, EventArgs e)
         {
+           // BmiPVM.BMI = 0;
             await Navigation.PushAsync(new BMIResultPage());
         }
     }

@@ -16,8 +16,14 @@
                HorizontalTextAlignment="Center"/>
         </StackLayout>
 
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
-            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="20" RowSpacing="20">
+        <StackLayout VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand">
+            
+            <Grid VerticalOptions="FillAndExpand" 
+                  HorizontalOptions="FillAndExpand" 
+                  ColumnSpacing="20" 
+                  RowSpacing="20">
+                
                 <Frame CornerRadius="10"       
                        Padding="0" 
                        Grid.Row="0"  
