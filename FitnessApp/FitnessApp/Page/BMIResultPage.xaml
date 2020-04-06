@@ -22,11 +22,9 @@
                    FontSize="20"
                    HorizontalOptions="Center" TextColor="#FFFFFF"/>
 
-            
+
         </custom:PancakeView>
-
-
-
+        
     </StackLayout>
 
 </ContentPage>

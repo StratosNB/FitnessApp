@@ -9,7 +9,10 @@ namespace FitnessApp.Model
     {
         string height = string.Empty;
         string weight = string.Empty;
-        string bmi = string.Empty;
+        int age = 0;
+        Boolean male = false;
+        Boolean female = false;
+        int bmi = 0;
 
         public string Height
         {
@@ -47,7 +50,21 @@ namespace FitnessApp.Model
             }
         }
 
-        public string BMI
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+
+            set
+            {
+
+            }
+
+        }
+
+        public int BMI
         {
             get
             {
