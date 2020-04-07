@@ -9,14 +9,14 @@ namespace FitnessApp.Custom_Components
     {
         Button PlusBtn;
         Button MinusBtn;
-        Entry Entry;
+        TransparentEntry TransparentEntry;
 
         public static readonly BindableProperty TextProperty =
           BindableProperty.Create(
-             propertyName: "Text",
+              propertyName: "Text",
               returnType: typeof(int),
               declaringType: typeof(CustomStepper),
-              defaultValue: 1,
+              defaultValue: 20,
               defaultBindingMode: BindingMode.TwoWay);
 
         public int Text
@@ -26,8 +26,8 @@ namespace FitnessApp.Custom_Components
         }
         public CustomStepper()
         {
-            PlusBtn = new Button { Text = "+", WidthRequest = 40, FontAttributes = FontAttributes.Bold, FontSize = 15 };
-            MinusBtn = new Button { Text = "-", WidthRequest = 40, FontAttributes = FontAttributes.Bold, FontSize = 15 };
+            PlusBtn = new Button { Text = "+", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold, FontSize = 80};
+            MinusBtn = new Button { Text = "-", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold, FontSize = 80};
             switch (Device.RuntimePlatform)
             {
 
@@ -49,18 +49,24 @@ namespace FitnessApp.Custom_Components
             Orientation = StackOrientation.Horizontal;
             PlusBtn.Clicked += PlusBtn_Clicked;
             MinusBtn.Clicked += MinusBtn_Clicked;
-            Entry = new Entry
+            TransparentEntry = new TransparentEntry
             {
-                PlaceholderColor = Color.Gray,
-                Keyboard = Keyboard.Numeric,
-                WidthRequest = 40,
-                BackgroundColor = Color.FromHex("#3FFF")
-            };
-            Entry.SetBinding(Entry.TextProperty, new Binding(nameof(Text), BindingMode.TwoWay, source: this));
-            Entry.TextChanged += Entry_TextChanged;
-            Children.Add(PlusBtn);
-            Children.Add(Entry);
+                  PlaceholderColor = Color.White,
+                  FontSize = 50,
+                  Keyboard = Keyboard.Numeric,
+                  WidthRequest = 65,
+                  TextColor = Color.White
+
+              };
+
+            TransparentEntry.SetBinding(TransparentEntry.TextProperty, new Binding(nameof(Text), BindingMode.TwoWay, source: this));           
+            TransparentEntry.TextChanged += Entry_TextChanged;
+
+
             Children.Add(MinusBtn);
+            Children.Add(TransparentEntry);
+            Children.Add(PlusBtn);
+            
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)

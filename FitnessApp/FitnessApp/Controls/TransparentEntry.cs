@@ -7,5 +7,7 @@ namespace FitnessApp
 {
     public class TransparentEntry: Entry
     {
+
+       
     }
 }
