@@ -8,18 +8,6 @@
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms">
 
-
-    <!--  Common style for SfRadioButton  -->
-    <Style x:Key="SfRadioButtonStyle" TargetType="buttons:SfRadioButton">
-        <Setter Property="HorizontalTextAlignment" Value="Start" />
-        <Setter Property="HorizontalOptions" Value="Start" />
-        <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="FontSize" Value="16" />
-        <Setter Property="UncheckedColor" Value="{DynamicResource Gray-300}" />
-        <Setter Property="Margin" Value="16,0" />
-    </Style>
-
     <!--  Common style for checkout page RadioButton  -->
     <Style
         x:Key="RadioButtonStyle"
@@ -38,15 +26,6 @@
         <Setter Property="FontSize" Value="16" />
         <Setter Property="UncheckedColor" Value="{DynamicResource Gray-300}" />
         <Setter Property="Margin" Value="16,0" />
-    </Style>
-
-    <!--  Common style for checkout page RadioButton  -->
-    <Style
-        x:Key="RadioButtonStyle"
-        BasedOn="{StaticResource SfRadioButtonStyle}"
-        TargetType="buttons:SfRadioButton">
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
     </Style>
 
 </ResourceDictionary>

@@ -9,31 +9,40 @@
              xmlns:xyz="clr-namespace:FitnessApp"
              mc:Ignorable="d"
              xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows" 
-             x:Class="FitnessApp.BMICalculatorPage">  
-    
+             xmlns:local1="clr-namespace:FitnessApp.Page" xmlns:Custom="clr-namespace:FitnessApp.Custom_Components"
+    x:Class="FitnessApp.BMICalculatorPage">
+
     <ContentPage.BindingContext>
-
         <local:BMICalculatorPageViewModel/>
-
     </ContentPage.BindingContext>
 
+    <ScrollView>
     <StackLayout Padding="7" 
                  Spacing="7" 
                  BackgroundColor="White">
 
-        <custom:PancakeView CornerRadius="10"       
+        <custom:PancakeView
+               CornerRadius="10"       
                BackgroundColor="#3F51B5"
                Padding="0"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand">
-            
-            <StackLayout Orientation="Horizontal" 
-                         HorizontalOptions="Center" >
 
+            <StackLayout Orientation="Vertical" 
+                         HorizontalOptions="Center"
+                         Padding="0">
+
+                <Label Text="Gender" 
+                       TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="35"/>
+
+                <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand"
                              Padding="10">
-
+                    
                     <Button Text="♂"
                             TextColor="DeepSkyBlue"
                             FontSize="65"
@@ -61,11 +70,12 @@
                            Text="Female"
                            TextColor="#ffffff"/>
                 </StackLayout>
+                </StackLayout>
             </StackLayout>
         </custom:PancakeView>
 
-        <custom:PancakeView CornerRadius="10"  
-               
+        <custom:PancakeView
+               CornerRadius="10"                
                Padding="0"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand" >
@@ -73,41 +83,18 @@
             <StackLayout Orientation="Horizontal"                         
                          BackgroundColor="#3F51B5">
 
-                <StackLayout VerticalOptions="CenterAndExpand" 
-                             HorizontalOptions="CenterAndExpand">
-                    
-                    <Label x:Name="Imperial_System_Label"
-                        Text="Imperial System" 
-                        TextColor="White"
-                        FontSize="10"
-                        HorizontalTextAlignment="Center"
-                        HorizontalOptions="Center"/>
-                    
-                    <Switch x:Name="Switch"
-                        HorizontalOptions="Center"
-                        Toggled="Switch_Toggled"/>
-                </StackLayout>
-                
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="CenterAndExpand" >
 
-                    <Label Text="Age" TextColor="White"
+                        <Label Text="Age" 
+                           TextColor="White"
                            VerticalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"/>
+                           HorizontalTextAlignment="Center"
+                           FontSize="35"/>
+                    
+                        <Custom:CustomStepper Text="{Binding Quantity}" />
 
-                    <xyz:TransparentEntry Keyboard="Numeric"
-                                          Text="{Binding Source={x:Reference stepper}, Path=Value}" 
-                                          TextColor="White"
-                                          HorizontalTextAlignment="Center"
-                                          HorizontalOptions="CenterAndExpand"
-                                          VerticalOptions="Start"/>
-
-                    <Stepper x:Name="stepper"
-                             Maximum="125"
-                             Minimum="0"
-                             Increment="1"
-                             Value="24" />
-                </StackLayout>
+                    </StackLayout>
             </StackLayout>
         </custom:PancakeView>
 
@@ -168,6 +155,8 @@
                 VerticalOptions="FillAndExpand"      
                 Clicked="CalculateButton_OnClicked"/>
     </StackLayout>
+    </ScrollView>
+
 </ContentPage>
     
     
