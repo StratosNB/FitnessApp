@@ -4,14 +4,15 @@
              x:Class="MasterDetailPageNavigation.MasterPage"
 			 Padding="0,40,0,0"
 			 IconImageSource="hamburger.png"
-			 Title="BMI Calculator">
+             Title="BMI Calculator">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
            <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
                     <local:MasterPageItem Title="Calculator" TargetType="{x:Type local:BMICalculatorPage}" />
-                    <local:MasterPageItem Title="Language"  />
-                    <local:MasterPageItem Title="About" />
+                    <local:MasterPageItem Title="History" TargetType="{x:Type local:HistoryPage}"  />
+                    <local:MasterPageItem Title="Language" TargetType="{x:Type local:LanguagePage}" />
+                    <local:MasterPageItem Title="About" TargetType="{x:Type local:AboutPage}" />
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

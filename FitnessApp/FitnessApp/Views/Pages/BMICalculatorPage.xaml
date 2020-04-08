@@ -1,162 +1,114 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-             xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:FitnessApp.Model" 
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    mc:Ignorable="d"
-    xmlns:Custom="clr-namespace:FitnessApp"
-    x:Class="FitnessApp.BMICalculatorPage">
+             mc:Ignorable="d"
+             xmlns:Custom="clr-namespace:FitnessApp"
+             x:Class="FitnessApp.BMICalculatorPage">
+             
 
     <ContentPage.BindingContext>
         <local:BMICalculatorPageViewModel/>
     </ContentPage.BindingContext>
 
+    <StackLayout Spacing="0">
     <ScrollView>
-    <StackLayout Padding="7" 
-                 Spacing="7" 
-                 BackgroundColor="White">
-
-            <custom:PancakeView
-               CornerRadius="10"
-               Padding="0"
+        <custom:PancakeView
+               Padding="20"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#9AA7E8" 
+               BackgroundGradientEndColor="#C8CEE9" 
                BackgroundGradientStartColor="#3F51B5">
-
-                <StackLayout Orientation="Vertical" 
+            <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center"
-                         Padding="0">
-
+                         Padding="20"
+                         Spacing="25">
                 <Label Text="Gender" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-
-                <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical" 
+                <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand"
                              Padding="10">
-                    
-                    <Button Text="♂"
+                        <Button Text="♂"
                             TextColor="DeepSkyBlue"
                             FontAttributes="Bold"
                             FontSize="65"
                             HeightRequest="100"
                             WidthRequest="100"/>
-
-                    <Label FontSize="13" 
+                        <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 
                            TextColor="#ffffff" 
                            Text="Male" />
-                    
-                </StackLayout>
-
-                <StackLayout Orientation="Vertical" 
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand" >
-
-                    <Button Text="♀"
+                        <Button Text="♀"
                             TextColor="DeepPink"
                             FontAttributes="Bold"
                             FontSize="65"
                             HeightRequest="100"
                             WidthRequest="100"/>
-
-                    <Label FontSize="13" 
+                        <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 
                            Text="Female"
                            TextColor="#ffffff"/>
+                    </StackLayout>
                 </StackLayout>
-                </StackLayout>
-            </StackLayout>
-        </custom:PancakeView>
-
-        <custom:PancakeView
-               CornerRadius="10"                
-               Padding="0"
-               VerticalOptions="FillAndExpand" 
-               HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#9AA7E8" 
-               BackgroundGradientStartColor="#3F51B5">
-
                 <StackLayout Orientation="Horizontal" >
                     <StackLayout Orientation="Vertical" 
                              HorizontalOptions="CenterAndExpand"
                              VerticalOptions="CenterAndExpand">
-
                         <Label Text="Age" 
                            TextColor="White"
                            VerticalOptions="CenterAndExpand"
                            HorizontalTextAlignment="Center"
                            FontSize="20"/>
-                    
                         <Custom:CustomStepper 
                             Text="{Binding Quantity}"
-                            Margin="10"
-                            />
-
+                            Margin="10"/>
                     </StackLayout>
-            </StackLayout>
-        </custom:PancakeView>
-
-        <custom:PancakeView CornerRadius="10"  
-               Padding="0"
-               VerticalOptions="FillAndExpand" 
-               HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#9AA7E8" 
-               BackgroundGradientStartColor="#3F51B5">
-            
-            <StackLayout HorizontalOptions="CenterAndExpand">
-
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Height" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-
                     <Custom:CustomStepper 
                             Text="{Binding Quantity}"
-                            Margin="10"
-                            />
-
+                            Margin="10"/>
                 </StackLayout>
-        </custom:PancakeView>
-
-            <custom:PancakeView CornerRadius="10"  
-               Padding="0"
-               VerticalOptions="FillAndExpand" 
-               HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#9AA7E8" 
-               BackgroundGradientStartColor="#3F51B5">
-                
                 <StackLayout HorizontalOptions="CenterAndExpand">
-
                     <Label Text="Weight" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-
                     <Custom:CustomStepper 
                             Text="{Binding Quantity}"
-                            Margin="10"
-                            />
+                            Margin="10" />
                 </StackLayout>
+            </StackLayout>
         </custom:PancakeView>
-
-        <Button Text="Calculate" 
-                TextColor="White"
-                FontSize="20"
-                BackgroundColor="#FF4081"
-                VerticalOptions="FillAndExpand"      
-                Clicked="CalculateButton_OnClicked"/>
-    </StackLayout>
     </ScrollView>
 
+    <custom:PancakeView>
+        <Button Text="Calculate" 
+                TextColor="White"
+                FontSize="30"
+                BackgroundColor="#FF4081"
+                VerticalOptions="FillAndExpand" 
+                HeightRequest="60"
+                Clicked="CalculateButton_OnClicked"/>
+    </custom:PancakeView>
+    </StackLayout>
 </ContentPage>
     
     
