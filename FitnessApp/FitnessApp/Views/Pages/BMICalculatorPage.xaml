@@ -15,53 +15,52 @@
     </ContentPage.BindingContext>
 
     <StackLayout Spacing="0">
-    <ScrollView>
-        <custom:PancakeView
+        <ScrollView>
+            <custom:PancakeView
                Padding="20"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#C8CEE9" 
-               BackgroundGradientStartColor="#3F51B5">
-            <StackLayout Orientation="Vertical" 
+               BackgroundGradientEndColor="#C1D5DF" 
+               BackgroundGradientStartColor="#2196F3">
+                <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center"
                          Padding="20"
                          Spacing="25">
-                <Label Text="Gender" 
+                    <Label Text="Gender" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-                <StackLayout Orientation="Horizontal"
-                                 HorizontalOptions="CenterAndExpand">
-                    <StackLayout Orientation="Vertical" 
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand"
                              Padding="10">
-                        <Button Text="♂"
+                            <Button Text="♂"
                             TextColor="DeepSkyBlue"
                             FontAttributes="Bold"
                             FontSize="65"
                             HeightRequest="100"
                             WidthRequest="100"/>
-                        <Label FontSize="13" 
+                            <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 
                            TextColor="#ffffff" 
                            Text="Male" />
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" 
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" 
                              VerticalOptions="CenterAndExpand" >
-                        <Button Text="♀"
+                            <Button Text="♀"
                             TextColor="DeepPink"
                             FontAttributes="Bold"
                             FontSize="65"
                             HeightRequest="100"
                             WidthRequest="100"/>
-                        <Label FontSize="13" 
+                            <Label FontSize="13" 
                            HorizontalTextAlignment="Center" 
                            Text="Female"
                            TextColor="#ffffff"/>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" >
                     <StackLayout Orientation="Vertical" 
                              HorizontalOptions="CenterAndExpand"
                              VerticalOptions="CenterAndExpand">
@@ -74,37 +73,36 @@
                             Text="{Binding Quantity}"
                             Margin="10"/>
                     </StackLayout>
-                </StackLayout>
-                <StackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Height" 
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Height" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-                    <Custom:CustomStepper 
+                        <Custom:CustomStepper 
                             Text="{Binding Quantity}"
                             Margin="10"/>
-                </StackLayout>
-                <StackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Weight" 
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Weight" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        FontSize="20"/>
-                    <Custom:CustomStepper 
+                        <Custom:CustomStepper 
                             Text="{Binding Quantity}"
                             Margin="10" />
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
-        </custom:PancakeView>
-    </ScrollView>
-
-    <custom:PancakeView>
+            </custom:PancakeView>
+        </ScrollView>
+        <custom:PancakeView BackgroundColor="#FF4081">
         <Button Text="Calculate" 
                 TextColor="White"
                 FontSize="30"
                 BackgroundColor="#FF4081"
                 VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
                 HeightRequest="60"
                 Clicked="CalculateButton_OnClicked"/>
     </custom:PancakeView>
