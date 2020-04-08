@@ -20,8 +20,8 @@
                Padding="20"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#C1D5DF" 
-               BackgroundGradientStartColor="#2196F3">
+               BackgroundGradientEndColor="#C5CDDF" 
+               BackgroundGradientStartColor="#235ADF">
                 <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center"
                          Padding="20"
@@ -29,7 +29,7 @@
                     <Label Text="Gender" 
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
+                       HorizontalTextAlignment="Center" 
                        FontSize="20"/>
                     <StackLayout Orientation="Horizontal"
                              HorizontalOptions="CenterAndExpand">
