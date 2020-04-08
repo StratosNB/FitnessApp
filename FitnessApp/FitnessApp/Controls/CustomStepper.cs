@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace FitnessApp.Custom_Components
+namespace FitnessApp
 {
     public class CustomStepper : StackLayout
     {
