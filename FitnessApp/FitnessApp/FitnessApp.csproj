@@ -29,5 +29,6 @@
   <ItemGroup>
     <Folder Include="Custom Components\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Views\Navigation\" />
   </ItemGroup>
 </Project>

@@ -35,7 +35,7 @@
                        TextColor="White"
                        VerticalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
-                       FontSize="35"/>
+                       FontSize="20"/>
 
                 <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Vertical" 
@@ -92,7 +92,7 @@
                            TextColor="White"
                            VerticalOptions="CenterAndExpand"
                            HorizontalTextAlignment="Center"
-                           FontSize="35"/>
+                           FontSize="20"/>
                     
                         <Custom:CustomStepper 
                             Text="{Binding Quantity}"
@@ -110,24 +110,20 @@
                BackgroundGradientEndColor="#9AA7E8" 
                BackgroundGradientStartColor="#3F51B5">
             
-            <StackLayout>
-                                
-                <Label x:Name="Height_Label"
-                       Text="{Binding Height, StringFormat='Height: {0:F0}'}" 
+            <StackLayout HorizontalOptions="CenterAndExpand">
+
+                    <Label Text="Height" 
                        TextColor="White"
-                       FontSize="35"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand"/>
-                      
-                <Slider x:Name="Height_Slider" 
-                        Maximum="225" 
-                        Minimum="135" 
-                        Value="170" 
-                        ValueChanged="Height_Slider_ValueChanged"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="StartAndExpand"/>
-                        
-            </StackLayout>
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"/>
+
+                    <Custom:CustomStepper 
+                            Text="{Binding Quantity}"
+                            Margin="10"
+                            />
+
+                </StackLayout>
         </custom:PancakeView>
 
             <custom:PancakeView CornerRadius="10"  
@@ -136,24 +132,22 @@
                HorizontalOptions="FillAndExpand"
                BackgroundGradientEndColor="#9AA7E8" 
                BackgroundGradientStartColor="#3F51B5">
-                <StackLayout >  
                 
-                <Label x:Name="Weight_Label"
-                       Text="{Binding Weight, StringFormat='Weight: {0:F0}'}" 
-                       TextColor="White"
-                       FontSize="35"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand"/>
+                <StackLayout HorizontalOptions="CenterAndExpand">
 
-                <Slider x:Name="Weight_Slider" 
-                        Maximum="155" 
-                        Minimum="35" 
-                        Value="70" 
-                        ValueChanged="Weight_Slider_ValueChanged"
-                        HorizontalOptions="Fill"
-                        VerticalOptions="StartAndExpand"/>    
-                        
-            </StackLayout>
+                    <Label Text="Weight" 
+                       TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"/>
+
+                    <Custom:CustomStepper 
+                            Text="{Binding Quantity}"
+                            Margin="10"
+                            />
+
+
+                </StackLayout>
         </custom:PancakeView>
 
         <Button Text="Calculate" 

@@ -19,21 +19,21 @@ namespace FitnessApp
             InitializeComponent();
             BindingContext = BmiPVM;
 
-            BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
-            BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
+          //  BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
+          //  BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
         }
         private void Switch_Toggled(object sender, ToggledEventArgs e)
         {
             if (e.Value)
             {
-                BmiPVM.Height = BmiPVM.CmToFeetAndInches(Height_Slider.Value);
-                BmiPVM.Weight = BmiPVM.KgToLbs(Weight_Slider.Value);
+             //   BmiPVM.Height = BmiPVM.CmToFeetAndInches(Height_Slider.Value);
+             //   BmiPVM.Weight = BmiPVM.KgToLbs(Weight_Slider.Value);
 
             }
             else
             {
-                BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
-                BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
+               // BmiPVM.Height = $"{Math.Round(Height_Slider.Value, 1)} cm";
+               // BmiPVM.Weight = $"{Math.Round(Weight_Slider.Value, 1)} kg";
             }
 
         }
