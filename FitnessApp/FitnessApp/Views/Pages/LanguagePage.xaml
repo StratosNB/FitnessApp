@@ -5,11 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FitnessApp.LanguagePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Language"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+        <TableView>
+            <TableView.Root>
+                <TableSection Title="Languages">
+                    <SwitchCell Text="English" On="True" />
+                    <SwitchCell Text="Italian" On="false" />
+                    <SwitchCell Text="Spanish" On="false" />
+                </TableSection>
+            </TableView.Root>
+        </TableView>
 </ContentPage>

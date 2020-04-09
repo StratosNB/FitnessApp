@@ -8,8 +8,6 @@
              mc:Ignorable="d"
              xmlns:Custom="clr-namespace:FitnessApp"
              x:Class="FitnessApp.BMICalculatorPage">
-             
-
     <ContentPage.BindingContext>
         <local:BMICalculatorPageViewModel/>
     </ContentPage.BindingContext>
@@ -20,7 +18,7 @@
                Padding="20"
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand"
-               BackgroundGradientEndColor="#C5CDDF" 
+               BackgroundGradientEndColor="#D7D9DF" 
                BackgroundGradientStartColor="#235ADF">
                 <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center"
