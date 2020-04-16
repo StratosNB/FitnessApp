@@ -22,8 +22,6 @@
                    FontSize="100"
                    HorizontalOptions="Center" 
                    HeightRequest="150"/>
-
-           
                 <Grid VerticalOptions="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -36,7 +34,7 @@
                            TextColor="White" 
                            Grid.Row="0"
                            Grid.Column="0"/>
-                    <Label Text="18.5"
+                    <Label Text="&lt; 18.5"
                            HorizontalOptions="EndAndExpand"
                            TextColor="White"
                            Grid.Row="0"
@@ -86,7 +84,7 @@
                            TextColor="White" 
                            Grid.Row="5"
                            Grid.Column="0"/>
-                    <Label Text="40"
+                    <Label Text="> 40"
                            HorizontalOptions="EndAndExpand"
                            TextColor="White" 
                            Grid.Row="5"
@@ -98,11 +96,9 @@
                    FontSize="30"
                    HorizontalTextAlignment="Center"
                    HorizontalOptions="Center"
-                       Padding="20"/>
-                
+                   Padding="20"/>
                 <StackLayout Orientation="Horizontal"
                              HorizontalOptions="Center">
-
                     <Button Text="Save" 
                             TextColor="White"
                             FontSize="30"
@@ -113,12 +109,8 @@
                             TextColor="White"
                             FontSize="30"
                             HeightRequest="60"
-                            BackgroundColor="Transparent"/>
-
+                            BackgroundColor="Default"/>
                 </StackLayout>
-
-
-
             </StackLayout>
         </custom:PancakeView>
     </StackLayout>

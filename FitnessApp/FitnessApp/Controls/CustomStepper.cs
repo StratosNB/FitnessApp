@@ -26,16 +26,16 @@ namespace FitnessApp
         }
         public CustomStepper()
         {
-            PlusBtn = new Button { Text = "+", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold, FontSize = 80};
-            MinusBtn = new Button { Text = "-", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold, FontSize = 80};
+            PlusBtn = new Button { Text = "+", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold};
+            MinusBtn = new Button { Text = "-", TextColor = Color.White, WidthRequest = 80, FontAttributes = FontAttributes.Bold};
             switch (Device.RuntimePlatform)
             {
 
                 case Device.UWP:
                 case Device.Android:
                     {
-                        PlusBtn.BackgroundColor = Color.Transparent;
-                        MinusBtn.BackgroundColor = Color.Transparent;
+                        PlusBtn.BackgroundColor = Color.Default;
+                        MinusBtn.BackgroundColor = Color.Default;
                         break;
                     }
                 case Device.iOS:
@@ -55,14 +55,16 @@ namespace FitnessApp
                   FontSize = 50,
                   Keyboard = Keyboard.Numeric,
                   WidthRequest = 65,
-                  TextColor = Color.White
+                  TextColor = Color.White,
+                  
 
               };
 
             TransparentEntry.SetBinding(TransparentEntry.TextProperty, new Binding(nameof(Text), BindingMode.TwoWay, source: this));           
             TransparentEntry.TextChanged += Entry_TextChanged;
 
-
+            this.BackgroundColor = Color.Black;
+            this.Padding = 20;
             Children.Add(MinusBtn);
             Children.Add(TransparentEntry);
             Children.Add(PlusBtn);
