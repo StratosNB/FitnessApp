@@ -1,6 +1,6 @@
-# FitnessApp
+# BMI Calculator
 
-BMI Calculator:
+![In a single picture](https://i.imgur.com/b00yhd0.png)
 
-This xamarin app lets you calculate your BMI using your height, weight, age and gender.
 
+![In a single picture](https://i.imgur.com/DRjBrIf.png)
