@@ -1,6 +1,6 @@
 # BMI Calculator
 
-Xamarin app that calculates a person's **BMI** taking as parameters:
+Xamarin app that calculates a the **BMI** taking as parameters a person's:
 
 * Gender
 * Age
